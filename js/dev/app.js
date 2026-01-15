@@ -530,6 +530,53 @@ window.initSelectBlocks = function() {
 document.addEventListener("DOMContentLoaded", () => {
   initSelectBlocks();
 });
+if (document.querySelector("[data-switch-block]")) {
+  document.querySelectorAll("[data-switch-block]").forEach((block) => {
+    const buttons = block.querySelectorAll("button");
+    if (!buttons.length) return;
+    const bg = document.createElement("span");
+    bg.className = "switch-bg";
+    block.appendChild(bg);
+    const getBlockOffsets = () => {
+      const styles = getComputedStyle(block);
+      return {
+        paddingLeft: parseFloat(styles.paddingLeft),
+        paddingTop: parseFloat(styles.paddingTop),
+        borderLeft: parseFloat(styles.borderLeftWidth),
+        borderTop: parseFloat(styles.borderTopWidth)
+      };
+    };
+    const moveBgToButton = (btn, animate = true) => {
+      const blockRect = block.getBoundingClientRect();
+      const btnRect = btn.getBoundingClientRect();
+      const offsets = getBlockOffsets();
+      const centerX = btnRect.left - blockRect.left - offsets.borderLeft + btnRect.width / 2;
+      const centerY = btnRect.top - blockRect.top - offsets.borderTop + btnRect.height / 2;
+      bg.style.width = `${btnRect.width}px`;
+      bg.style.height = `${btnRect.height}px`;
+      bg.style.transform = `
+            translate(${centerX}px, ${centerY}px)
+            translate(-50%, -50%)
+        `;
+      bg.style.transition = animate ? "transform 0.25s ease, width 0.25s ease, height 0.25s ease" : "none";
+    };
+    const activeBtn = block.querySelector(".active") || buttons[0];
+    activeBtn.classList.add("active");
+    moveBgToButton(activeBtn, false);
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (btn.classList.contains("active")) return;
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        moveBgToButton(btn);
+      });
+    });
+    window.addEventListener("resize", () => {
+      const current = block.querySelector(".active");
+      if (current) moveBgToButton(current, false);
+    });
+  });
+}
 class CircularTimer {
   constructor(container) {
     this.container = container;
