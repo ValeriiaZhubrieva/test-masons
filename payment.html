@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preload" href="./assets/fonts/Finlandica-SemiBold.woff2" as="font" type="font/woff2" defer>
+		<link rel="preload" href="./assets/fonts/Finlandica-Regular.woff2" as="font" type="font/woff2" defer>
+		<link rel="preload" href="./assets/fonts/Finlandica-Medium.woff2" as="font" type="font/woff2" defer>
+		<link rel="shortcut icon" href="./assets/img/favicon.ico">
+		<title>Payment</title>
+		<script defer src="./js/app.min.js?v=1768487874460"></script>
+		<link rel="stylesheet" defer href="./css/app.min.css?v=1768487874460">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header" data-fls-header-scroll="" data-fls-lp="">
+				<div class="header__container">
+					<div class="header__body">
+						<a href="#" class="header__logo">
+							<img src="./assets/img/logo.svg" alt="logo">
+						</a>
+						<div class="header__menu menu">
+							<nav class="menu__body" data-top-position="">
+								<div class="menu__wrapper">
+									<ul class="menu__list">
+										<li class="menu__item">
+											<a href="#" class="menu__link link">Правила обмена</a>
+										</li>
+										<li class="menu__item">
+											<a href="#" class="menu__link link">FAQ</a>
+										</li>
+										<li class="menu__item">
+											<a href="#" class="menu__link link">Контакты</a>
+										</li>
+										<li class="menu__item">
+											<a href="#" class="menu__link link-accent">@masonexchange</a>
+										</li>
+									</ul>
+								</div>
+							</nav>
+							<div class="menu__actions">
+								<div data-dropdown-hover="" class="menu__language lang-block">
+									<button data-dropdown-button="" class="lang-block__button">ru</button>
+									<ul data-dropdown-list="" class="lang-block__list">
+										<li class="lang-block__item">
+											<a href="" data-dropdown-item="" data-value="ru" class="lang-block__link">ru</a>
+										</li>
+										<li class="lang-block__item">
+											<a href="" data-dropdown-item="" data-value="en" class="lang-block__link">en</a>
+										</li>
+									</ul>
+									<input type="hidden" name="select-language" data-dropdown-input="">
+								</div>
+								<a href="#" class="menu__login button button--light button--small">
+									<span class="menu__login-text">Аккаунт</span>
+									<span class="menu__login-icon">
+										<svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M5.33329 4.00004C5.33329 4.70728 5.61424 5.38556 6.11434 5.88566C6.61444 6.38576 7.29272 6.66671 7.99996 6.66671C8.7072 6.66671 9.38548 6.38576 9.88558 5.88566C10.3857 5.38556 10.6666 4.70728 10.6666 4.00004C10.6666 3.2928 10.3857 2.61452 9.88558 2.11442C9.38548 1.61433 8.7072 1.33337 7.99996 1.33337C7.29272 1.33337 6.61444 1.61433 6.11434 2.11442C5.61424 2.61452 5.33329 3.2928 5.33329 4.00004Z" stroke="currentColor" stroke-width="1.5"></path>
+											<path d="M13.3333 11.6667C13.3333 13.3236 13.3333 14.6667 7.99996 14.6667C2.66663 14.6667 2.66663 13.3236 2.66663 11.6667C2.66663 10.0098 5.05444 8.66671 7.99996 8.66671C10.9455 8.66671 13.3333 10.0098 13.3333 11.6667Z" stroke="currentColor" stroke-width="1.5"></path>
+										</svg>
+									</span>
+								</a>
+								<button type="button" data-fls-menu="" class="menu__icon icon-menu">
+									<span></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<main class="page" data-top-position="">
+				<section class="exchange-block">
+					<div class="exchange-block__container">
+						<div class="exchange-block__head">
+							<h1 class="exchange-block__title title title--h1">Обмен BTC на USDC</h1>
+							<div class="breadcrumbs">
+								<a href="#" class="breadcrumbs__link">Главная</a>
+								<a href="#" class="breadcrumbs__link">Купить/Продать</a>
+								<span class="breadcrumbs__link active">Обмен BTC на USDC</span>
+							</div>
+						</div>
+						<div class="exchange-block__steps">
+							<div class="exchange-block__step active">
+								<div class="exchange-block__step-num">1</div>
+								<div class="exchange-block__step-text">Введите свои данные</div>
+							</div>
+							<div class="exchange-block__step current">
+								<div class="exchange-block__step-num">2</div>
+								<div class="exchange-block__step-text">Перевести средства</div>
+							</div>
+						</div>
+						<div class="exchange-block__wrapper">
+							<div class="exchange-block__inner payment-block">
+								<div class="payment-block__qrcode">
+									<img src="./assets/img/qr-code.svg" alt="Image" loading="lazy">
+								</div>
+								<div class="payment-block__content">
+									<div class="payment-block__head">
+										<div class="payment-block__head-body">
+											<div class="payment-block__title title title--h4 title--medium">Оплатить заявку</div>
+											<div class="payment-block__timer" data-timer="">60</div>
+										</div>
+										<button type="button" class="payment-block__cancel button button--red button--small">
+											<svg class="payment-block__cancel-icon" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M4 12L12 4M12 12L4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+											<span class="payment-block__cancel-text">Отменить обмен</span>
+										</button>
+										<div class="payment-block__text">Пожалуйста, произведите оплату по указанному адресу.</div>
+									</div>
+									<div class="payment-block__items">
+										<div class="payment-block__item">
+											<div class="payment-block__label">Сумма перевода</div>
+											<div class="payment-block__value">
+												1,000 USDT
+												<button type="button" class="payment-block__copy copy-btn">
+													<svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.0001 5.99984V3.0665C10.0001 2.84559 9.82101 2.6665 9.60008 2.6665H3.06675C2.84583 2.6665 2.66675 2.84559 2.66675 3.0665V9.59984C2.66675 9.82077 2.84583 9.99984 3.06675 9.99984H6.00008M12.9334 13.3332H6.40008C6.17917 13.3332 6.00008 13.1541 6.00008 12.9332V6.39984C6.00008 6.17892 6.17917 5.99984 6.40008 5.99984H12.9334C13.1543 5.99984 13.3334 6.17892 13.3334 6.39984V12.9332C13.3334 13.1541 13.1543 13.3332 12.9334 13.3332Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="payment-block__item">
+											<div class="payment-block__label">Адрес для оплаты</div>
+											<div class="payment-block__value">
+												TQnW83r3K6iiA9jX1WCfMW8WmWnisHTPAH
+												<button type="button" class="payment-block__copy copy-btn">
+													<svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.0001 5.99984V3.0665C10.0001 2.84559 9.82101 2.6665 9.60008 2.6665H3.06675C2.84583 2.6665 2.66675 2.84559 2.66675 3.0665V9.59984C2.66675 9.82077 2.84583 9.99984 3.06675 9.99984H6.00008M12.9334 13.3332H6.40008C6.17917 13.3332 6.00008 13.1541 6.00008 12.9332V6.39984C6.00008 6.17892 6.17917 5.99984 6.40008 5.99984H12.9334C13.1543 5.99984 13.3334 6.17892 13.3334 6.39984V12.9332C13.3334 13.1541 13.1543 13.3332 12.9334 13.3332Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="payment-block__text">
+										После оплаты нажмите кнопку
+										<span>«Оплата произведена»</span>
+										, ожидайте обработки заявки
+						оператором
+									</div>
+									<button type="button" class="payment-block__apply button">Оплата произведена</button>
+								</div>
+							</div>
+							<div class="exchange-block__inner payment-detail">
+								<div class="payment-detail__head">
+									<div class="payment-detail__head-top">
+										<div class="payment-detail__title title title--h4">Заявка на обмен #ea961b8f458c04b6022508b6b5c310d1</div>
+										<div class="payment-detail__status status status--yellow">Ожидает оплаты</div>
+									</div>
+									<div class="payment-detail__text">Заявка ожидает оплаты</div>
+								</div>
+								<div class="payment-detail__items">
+									<div class="payment-detail__item">
+										<div class="payment-detail__label">Дата создания</div>
+										<div class="payment-detail__value">09.10.25 15:50</div>
+									</div>
+									<div class="payment-detail__item">
+										<div class="payment-detail__label">Обменный курс</div>
+										<div class="payment-detail__value">1 usdt — 42.15 UAH</div>
+									</div>
+									<div class="payment-detail__item">
+										<div class="payment-detail__label">Тип обмена</div>
+										<div class="payment-detail__value">Фиксировано</div>
+									</div>
+									<div class="payment-detail__item">
+										<div class="payment-detail__label">Дополнительная комиссия</div>
+										<div class="payment-detail__value">20 UAH</div>
+									</div>
+									<div class="payment-detail__item">
+										<div class="payment-detail__label">Бонус за обмен</div>
+										<div class="payment-detail__value">0%</div>
+									</div>
+								</div>
+								<div class="payment-detail__rows">
+									<div class="payment-detail__row">
+										<div class="payment-detail__row-title title title--h4 title--medium">Вы отдаете</div>
+										<div class="payment-detail__row-body">
+											<div class="payment-detail__row-item">
+												<div class="payment-detail__row-label">Валюта</div>
+												<div class="payment-detail__row-value">
+													<div class="payment-detail__row-icon">
+														<img src="./assets/img/currency/usdt.svg" alt="Image" loading="lazy">
+													</div>
+													<div class="payment-detail__row-name">Tether ERC-20</div>
+												</div>
+											</div>
+											<div class="payment-detail__row-item">
+												<div class="payment-detail__row-label">Вы отдаете</div>
+												<div class="payment-detail__row-value">1,000 USDT</div>
+											</div>
+										</div>
+									</div>
+									<div class="payment-detail__row">
+										<div class="payment-detail__row-title title title--h4 title--medium">Вы получаете</div>
+										<div class="payment-detail__row-body">
+											<div class="payment-detail__row-item">
+												<div class="payment-detail__row-label">Валюта</div>
+												<div class="payment-detail__row-value">
+													<div class="payment-detail__row-icon">
+														<img src="./assets/img/currency/EUR.svg" alt="Image" loading="lazy">
+													</div>
+													<div class="payment-detail__row-name">EUR</div>
+												</div>
+											</div>
+											<div class="payment-detail__row-item">
+												<div class="payment-detail__row-label">Вы получаете</div>
+												<div class="payment-detail__row-value">261.90 EUR</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="payment-detail__inner">
+									<div class="payment-detail__subtitle title title--h5 title--medium">Персональные данные</div>
+									<div class="payment-detail__items">
+										<div class="payment-detail__item">
+											<div class="payment-detail__label">ФИО</div>
+											<div class="payment-detail__value">Иванов Алексей Сергеевич</div>
+										</div>
+										<div class="payment-detail__item">
+											<div class="payment-detail__label">Номер карты</div>
+											<div class="payment-detail__value">5249 8371 4620 9183</div>
+										</div>
+										<div class="payment-detail__item">
+											<div class="payment-detail__label">Электронная почта</div>
+											<div class="payment-detail__value">contact@masons.exchange</div>
+										</div>
+										<div class="payment-detail__item">
+											<div class="payment-detail__label">Telegram</div>
+											<div class="payment-detail__value">@masonasona</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__container">
+					<div class="footer__body">
+						<div class="footer__info">
+							<div class="footer__head">
+								<div class="footer__logo">
+									<img src="./assets/img/logo.svg" alt="Image" loading="lazy">
+								</div>
+								<div class="footer__copy">Masons 2025. All rights reserved.</div>
+							</div>
+							<div data-dropdown-hover="" class="footer__language lang-block">
+								<button data-dropdown-button="" class="lang-block__button">ru</button>
+								<ul data-dropdown-list="" class="lang-block__list">
+									<li class="lang-block__item">
+										<a href="" data-dropdown-item="" data-value="ru" class="lang-block__link">ru</a>
+									</li>
+									<li class="lang-block__item">
+										<a href="" data-dropdown-item="" data-value="en" class="lang-block__link">en</a>
+									</li>
+								</ul>
+								<input type="hidden" name="select-language" data-dropdown-input="">
+							</div>
+						</div>
+						<div class="footer__menu">
+							<ul class="footer__menu-list">
+								<li class="footer__menu-item">
+									<a href="#" class="footer__menu-link link">FAQ</a>
+								</li>
+								<li class="footer__menu-item">
+									<a href="#" class="footer__menu-link link">Правила обмена</a>
+								</li>
+								<li class="footer__menu-item">
+									<a href="#" class="footer__menu-link link">Политика AML/KYC</a>
+								</li>
+								<li class="footer__menu-item">
+									<a href="#" class="footer__menu-link link">Политика конфиденциальности</a>
+								</li>
+								<li class="footer__menu-item">
+									<a href="#" class="footer__menu-link link">Контакты</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__contacts">
+							<div class="footer__block">
+								<div class="footer__label">Рабочие часы</div>
+								<div class="footer__value">8:00 – 10:00</div>
+							</div>
+							<div class="footer__block">
+								<div class="footer__label">Поддержка Telegram</div>
+								<a href="#" class="footer__value link-accent">@masonexchange</a>
+							</div>
+							<div class="footer__block">
+								<div class="footer__label">Email</div>
+								<a href="#" class="footer__value link-accent">contact@masons.exchange</a>
+							</div>
+						</div>
+						<div class="footer__review">
+							<div class="footer__review-text">
+								Оставьте свое мнение и получите
+								<span>$5</span>
+							</div>
+							<div class="footer__review-items">
+								<a href="#" class="footer__review-item">
+									<img src="./assets/img/trustpilot.svg" alt="Image" loading="lazy">
+								</a>
+								<a href="#" class="footer__review-item">
+									<img src="./assets/img/best-change.svg" alt="Image" loading="lazy">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
