@@ -535,7 +535,12 @@ if (document.querySelector("[data-switch-block]")) {
     const buttons = block.querySelectorAll("button");
     if (!buttons.length) return;
     const bg = document.createElement("span");
-    bg.className = "switch-bg";
+    const switchType = block.getAttribute("data-switch-block");
+    if (switchType === "border") {
+      bg.className = "switch-bg switch-bg-border";
+    } else {
+      bg.className = "switch-bg";
+    }
     block.appendChild(bg);
     const getBlockOffsets = () => {
       const styles = getComputedStyle(block);
